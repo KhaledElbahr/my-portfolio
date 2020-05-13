@@ -1,6 +1,11 @@
 # Portfolio
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.0.
+Simple Portfolio with Angular. This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.0.
+
+## Get the Code
+git clone https://
+cd portfolio
+npm install
 
 ## Development server
 

@@ -1,0 +1,75 @@
+<mat-toolbar [class.dark]="(isDarkTheme | async)">
+  <mat-toolbar-row [class.header-resize]="isResize" class="mat-toolbar-row">
+    <mat-icon
+      class="mat-icon-logo"
+      [class.light]="(isDarkTheme | async)"
+      routerLink="/home"
+      routerLinkActive="active"
+    >
+      <h2 >Khaled Elbahr</h2>
+    </mat-icon>
+    <span class="example-spacer"></span>
+    <button
+      type="button"
+      mat-icon-button
+      [class.light]="(isDarkTheme | async)"
+      (click)="toggleDarkTheme()"
+    >
+      <mat-icon>emoji_objects</mat-icon>
+    </button>
+
+    <button
+      type="button"
+      aria-label="Toggle sidenav"
+      mat-icon-button
+      [class.light]="(isDarkTheme | async)"
+      (click)="toggleSideBar()"
+      *ngIf="isHandset$ | async"
+    >
+      <mat-icon *ngIf="!sidebar" aria-label="Side bar toggle icon"
+        >menu</mat-icon
+      >
+      <mat-icon *ngIf="sidebar" aria-label="Side bar toggle icon">
+        close</mat-icon
+      >
+    </button>
+
+    <ul *ngIf="!(isHandset$ | async)">
+      <li>
+        <button
+          mat-flat-button
+          class="mat-btn-nav"
+          routerLink="/home"
+          [class.active]="!(activeFragment | async)"
+          (click)="goToHome()"
+        >
+          Home
+        </button>
+      </li>
+      <li>
+        <button
+          mat-flat-button
+          class="mat-btn-nav"
+          routerLink="/"
+          [class.active]="(activeFragment | async) === 'projects'"
+          fragment="projects"
+          (click)="goToProjects()"
+        >
+          Projects
+        </button>
+      </li>
+      <li>
+        <button
+          mat-flat-button
+          class="mat-btn-nav"
+          routerLink="/"
+          [class.active]="(activeFragment | async) === 'contacts'"
+          fragment="contacts"
+          (click)="goToContacts()"
+        >
+          Contacts
+        </button>
+      </li>
+    </ul>
+  </mat-toolbar-row>
+</mat-toolbar>

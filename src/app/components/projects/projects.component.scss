@@ -1,0 +1,61 @@
+@import "../../../styles.scss";
+
+.heading {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.mat-content {
+  flex-direction: column;
+}
+
+.mat-accordion .mat-expansion-panel {
+  box-shadow: none;
+  border-radius: 0;
+}
+
+.card-icon {
+  margin-top: 2px;
+  float: left;
+  // color: #A3A3A3;
+  padding-right: 1rem;
+}
+
+.mat-body {
+  a {
+
+    &:link,
+    &:visited {
+      padding-top: 1rem;
+      color: rgba(0, 0, 0, .54);
+      text-decoration: none;
+      display: inline-block;
+    }
+  }
+
+  .card-icon {
+    transition: all .3s;
+  }
+
+  .card-link {
+    vertical-align: -webkit-baseline-middle;
+  }
+
+  .links:hover {
+    color: $color-main-1;
+
+    .card-icon {
+      color: $color-main-1;
+    }
+  }
+}
+
+
+.mat-expansion-panel .mat-expansion-panel-header.cdk-keyboard-focused:not([aria-disabled=true]),
+.mat-expansion-panel .mat-expansion-panel-header.cdk-program-focused:not([aria-disabled=true]),
+.mat-expansion-panel:not(.mat-expanded) .mat-expansion-panel-header:hover:not([aria-disabled=true]) {
+  background-color: transparent;
+}

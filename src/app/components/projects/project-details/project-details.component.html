@@ -1,0 +1,32 @@
+<!-- Recent work -->
+<section class="section-project-details">
+  <!--Header Section-->
+  <header class="page-header">
+    <div class="wow fadeInDown" data-wow-delay="5s">
+      <h1 class="heading-primary">{{ project.title }} Project Details</h1>
+    </div>
+  </header>
+  <svg _ngcontent-ook-c133="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path _ngcontent-ook-c133="" fill="#1a1a1c" fill-opacity="1" d="M0,32L34.3,64C68.6,96,137,160,206,186.7C274.3,213,343,203,411,176C480,149,549,107,617,96C685.7,85,754,107,823,133.3C891.4,160,960,192,1029,181.3C1097.1,171,1166,117,1234,101.3C1302.9,85,1371,107,1406,117.3L1440,128L1440,0L1405.7,0C1371.4,0,1303,0,1234,0C1165.7,0,1097,0,1029,0C960,0,891,0,823,0C754.3,0,686,0,617,0C548.6,0,480,0,411,0C342.9,0,274,0,206,0C137.1,0,69,0,34,0L0,0Z"></path></svg>
+  <main class="main-content">
+    <div class="container">
+      <div class="desc">
+        <h2><mat-icon role="img">double_arrow</mat-icon> Brief</h2>
+        <p>{{ project.description }}</p>
+      </div>
+      <div class="desc">
+        <h2><mat-icon role="img">list_alt</mat-icon> Features</h2>
+        <ol>
+          <li *ngFor="let f of project.features">{{ f | titlecase }}</li>
+        </ol>
+      </div>
+      <div class="desc">
+        <h2>
+          <mat-icon role="img">playlist_add_check</mat-icon> Technologies Used
+        </h2>
+        <ol>
+          <li *ngFor="let t of project.tech">{{ t | titlecase }}</li>
+        </ol>
+      </div>
+    </div>
+  </main>
+</section>

@@ -1,0 +1,71 @@
+@import "../../../styles.scss";
+@import url('https://fonts.googleapis.com/css?family=Quicksand&display=swap');
+
+.about-section {
+  padding: 7rem 0 12rem 0;
+}
+
+.content-wrapper {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1rem 2.8rem;
+  margin: 0 auto;
+  z-index: 12;
+
+  @include respond(tab-port) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.image {
+  text-align: center;
+
+  .img-fluid {
+    max-width: 100%;
+  }
+}
+
+.text-box {
+  width: 50% !important;
+}
+
+.image,
+.text-box {
+  flex: 1 1 0;
+  margin: 5px;
+
+  @include respond(tab-port) {
+    flex: 1 0 auto;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.h3 {
+  color: $color-black;
+}
+
+.img-fluid {
+  max-width: 100%;
+}
+
+h3 {
+  margin: 0 0 3rem 0;
+  font-size: 2.8rem !important;
+  font-family: Quicksand, sans-serif !important;
+
+  span {
+    font-weight: 600;
+  }
+}
+
+p {
+  font-size: 1.78rem !important;
+  line-height: 1.8;
+  letter-spacing: .7;
+  word-spacing: 1.2;
+  margin-top: 1rem;
+  margin-bottom: 3rem;
+}

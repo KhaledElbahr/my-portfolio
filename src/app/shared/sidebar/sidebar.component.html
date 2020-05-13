@@ -1,0 +1,28 @@
+<mat-nav-list>
+  <a
+    mat-list-item
+    class="mat-btn-nav"
+    routerLink="/home"
+    [class.active]="!(activeFragment | async)"
+    (click)="goToHome()"
+    >Home</a
+  >
+  <a
+    mat-list-item
+    class="mat-btn-nav"
+    routerLink="/"
+    fragment="projects"
+    [class.active]="(activeFragment | async) === 'projects'"
+    (click)="goToProjects()"
+    >Projects</a
+  >
+  <a
+    mat-list-item
+    class="mat-btn-nav"
+    routerLink="/"
+    fragment="contacts"
+    [class.active]="(activeFragment | async) === 'contacts'"
+    (click)="goToContacts()"
+    >Contacts</a
+  >
+</mat-nav-list>

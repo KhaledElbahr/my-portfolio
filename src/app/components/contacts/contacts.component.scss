@@ -1,0 +1,147 @@
+@import "../../../styles.scss";
+@import url('https://fonts.googleapis.com/css?family=Quicksand&display=swap');
+
+.contacts-section {
+  padding: 5rem 2.8rem;
+
+  .heading-tertiary {
+    font: 600 2rem Roboto, "Helvetica Neue", sans-serif !important;
+    padding-right: 2rem;
+    margin-bottom: 2.5rem;
+  }
+}
+
+.contact-section-heading {
+  .heading-secondary {
+    font: 600 4.5rem Roboto, "Helvetica Neue", sans-serif !important;
+    margin-bottom: 5rem;
+  }
+
+  .subtitle {
+    margin-bottom: 2rem;
+    line-height: 1.8;
+    font-size: 1.9rem;
+    font-weight: 500;
+    font: 600 1.7rem Quicksand, sans-serif !important;
+  }
+}
+
+.follow-me p {
+  font-size: 1.7rem !important;
+  line-height: 1.8;
+  letter-spacing: 0.7;
+  word-spacing: 1.2;
+  margin-bottom: 3rem;
+}
+
+.social-links ul {
+  list-style: none;
+  padding: 0;
+
+  li {
+    display: inline-block;
+    padding-right: 1rem;
+    font-size: 1.5rem;
+    width: 30px;
+
+    a {
+      font-size: 2.5rem;
+      color: $color-main-3;
+
+      &:hover {
+        color: $color-main-1;
+      }
+    }
+  }
+}
+
+.get-in-touch {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1rem 2.8rem;
+  margin: 0 auto;
+  z-index: 12;
+
+  @include respond(tab-port) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+}
+
+.follow-me {
+  -webkit-box-flex: 1;
+  flex: 1 1 0;
+  margin: 0 40px 0 0;
+  width: 50% !important;
+
+  @include respond(tab-land) {
+    justify-content: center;
+  }
+}
+
+.contact-me {
+  -webkit-box-flex: 1;
+  flex: 1 1 0;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  flex-direction: column;
+
+  @include respond(tab-land) {
+    width: 90%;
+    justify-content: center;
+  }
+}
+
+.follow-me,
+.contact-me {
+  flex: 1 1 0;
+  margin: 5px;
+
+  @include respond(tab-port) {
+    flex: 1 0 auto;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+  }
+}
+
+.form-group {
+  .form-control {
+    width: 100%;
+    margin-top: 2rem;
+
+    .control-input {
+      min-height: 20px;
+    }
+  }
+}
+
+textarea {
+  height: 120px;
+  min-height: 20px;
+  max-height: 200px;
+}
+
+.button {
+  margin-top: 2rem;
+  display: flex;
+
+  button {
+    width: auto;
+    -webkit-box-flex: 1;
+    flex: 1 0 auto;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    margin-top: 20px !important;
+  }
+
+  .btn-send {
+    margin: 0 20px 0 0;
+    -webkit-box-flex: 2;
+    flex: 2 0 auto;
+  }
+}

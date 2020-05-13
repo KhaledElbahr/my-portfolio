@@ -1,0 +1,50 @@
+<!-- Recent work -->
+<section class="section-projects">
+  <div class="container">
+    <div class="heading-box">
+      <div class="heading">
+        <h2 class="heading-secondary">Recent work</h2>
+      </div>
+    </div>
+    <main class="main-content">
+      <div class="container">
+        <!-- Projects -->
+        <mat-grid-list [cols]="columnNum" rowHeight="465px" gutterSize="20px">
+          <mat-grid-tile [colspan]="cols" *ngFor="let project of projects">
+            <mat-card class="mat-card">
+              <img
+                mat-card-image
+                src="{{ project.image }}"
+                title="{{ project.title }}-project image"
+                alt="{{ project.title }}-project image"
+              />
+              <mat-card-content>
+                <mat-accordion>
+                  <mat-expansion-panel>
+                    <mat-expansion-panel-header>
+                      <div class="mat-content">
+                        <mat-panel-title>
+                          {{ project.title }}
+                        </mat-panel-title>
+                      </div>
+                    </mat-expansion-panel-header>
+                    <div class="mat-body">
+                      <a
+                        routerLink="/project/{{ project.id }}"
+                        title="{{ project.title }}"
+                        class="links"
+                      >
+                        <mat-icon class="card-icon">visibility</mat-icon>
+                        <span class="card-link">View More</span>
+                      </a>
+                    </div>
+                  </mat-expansion-panel>
+                </mat-accordion>
+              </mat-card-content>
+            </mat-card>
+          </mat-grid-tile>
+        </mat-grid-list>
+      </div>
+    </main>
+  </div>
+</section>
