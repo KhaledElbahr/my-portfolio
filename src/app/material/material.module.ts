@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-// Material UI
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
@@ -16,7 +15,6 @@ import { LayoutModule } from '@angular/cdk/layout';
 @NgModule({
   imports: [
     CommonModule,
-    // Material UI
     MatToolbarModule,
     MatIconModule,
     MatButtonModule,
@@ -30,7 +28,6 @@ import { LayoutModule } from '@angular/cdk/layout';
   ],
   exports: [
     CommonModule,
-    // Material UI
     MatToolbarModule,
     MatIconModule,
     MatButtonModule,

@@ -2,15 +2,17 @@
   <mat-toolbar-row [class.header-resize]="isResize" class="mat-toolbar-row">
     <mat-icon
       class="mat-icon-logo"
+      aria-hidden="true"
       [class.light]="(isDarkTheme | async)"
       routerLink="/home"
       routerLinkActive="active"
     >
-      <h2 >Khaled Elbahr</h2>
+      <h2>Khaled Elbahr</h2>
     </mat-icon>
     <span class="example-spacer"></span>
     <button
       type="button"
+      aria-label="theme toggle icon"
       mat-icon-button
       [class.light]="(isDarkTheme | async)"
       (click)="toggleDarkTheme()"

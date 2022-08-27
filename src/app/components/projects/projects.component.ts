@@ -17,28 +17,24 @@ export class ProjectsComponent implements OnInit {
   constructor(
     private projectService: ProjectsService,
     private breakpointObserver: BreakpointObserver ) {
-    // large Screen
     this.breakpointObserver.observe(Breakpoints.Large).subscribe((largeMedia: BreakpointState) => {
       if (largeMedia.matches) {
         this.columnNum = 3;
         this.cols = 1;
       }
     });
-    // Medium Screen
     this.breakpointObserver.observe(Breakpoints.Medium).subscribe((mdMedia: BreakpointState) => {
       if (mdMedia.matches) {
         this.columnNum = 3;
         this.cols = 1;
       }
     });
-    // Small Screen
     this.breakpointObserver.observe(Breakpoints.Small).subscribe((smMedia: BreakpointState) => {
       if (smMedia.matches) {
         this.columnNum = 2;
         this.cols = 1;
       }
     });
-    // XSmall Screen
     this.breakpointObserver.observe(Breakpoints.XSmall).subscribe((xsMedia: BreakpointState) => {
       if (xsMedia.matches) {
         this.columnNum = 1;

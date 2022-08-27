@@ -43,18 +43,15 @@
   }
 }
 
-.h3 {
-  color: $color-black;
-}
-
 .img-fluid {
   max-width: 100%;
 }
 
-h3 {
+.about-heading {
   margin: 0 0 3rem 0;
   font-size: 2.8rem !important;
   font-family: Quicksand, sans-serif !important;
+  color: $color-black;
 
   span {
     font-weight: 600;

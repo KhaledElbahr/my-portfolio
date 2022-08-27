@@ -9,13 +9,11 @@ import { map } from 'rxjs/operators';
 })
 export class ProjectsService {
   getProjects(): Observable<Project[]> {
-    // TODO: Fetching the projects
     return of(PROJECTS);
   }
 
   getProject(id: number | string) {
     return this.getProjects().pipe(
-      // (+) before `id` turns the string into a number
       map((projects: Project[]) => projects.find(project => project.id === +id))
     );
   }

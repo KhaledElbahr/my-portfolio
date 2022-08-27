@@ -1,18 +1,14 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-// Reactive Forms Module
 import { ReactiveFormsModule } from '@angular/forms';
-// HTTP Client Module
 import { HttpClientModule } from '@angular/common/http';
-// Components
+import { AppRoutingModule } from './app-routing.module';
+import { MaterialModule } from './material/material.module';
+
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './shared/header/header.component';
 import { FooterComponent } from './shared/footer/footer.component';
-// Material Module
-import { MaterialModule } from './material/material.module';
-// App Routing Module
-import { AppRoutingModule } from './app-routing.module';
 import { SidebarComponent } from './shared/sidebar/sidebar.component';
 import { LayoutComponent } from './layout/layout.component';
 import { AboutComponent } from './components/about/about.component';
