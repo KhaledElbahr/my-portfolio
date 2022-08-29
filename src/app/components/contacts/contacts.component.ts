@@ -1,7 +1,7 @@
 import { Message } from './../../../../api/models/message';
 import { Component, OnInit } from '@angular/core';
 import { BreakpointObserver, Breakpoints, BreakpointState } from '@angular/cdk/layout';
-import { Validators, FormGroup, FormBuilder } from '@angular/forms';
+import { Validators, UntypedFormGroup, UntypedFormBuilder } from '@angular/forms';
 import { Router, ActivatedRoute } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 
@@ -11,8 +11,8 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./contacts.component.scss']
 })
 export class ContactsComponent implements OnInit {
-  contactsForm: FormGroup;
-  constructor(private http: HttpClient, private fb: FormBuilder) { }
+  contactsForm: UntypedFormGroup;
+  constructor(private http: HttpClient, private fb: UntypedFormBuilder) { }
 
   ngOnInit(): void {
     this.contactsForm = this.fb.group({
