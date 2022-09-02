@@ -1,20 +1,12 @@
-<mat-toolbar [class.dark]="(isDarkTheme | async)">
+<mat-toolbar [class.dark]="isDarkTheme | async">
   <mat-toolbar-row [class.header-resize]="isResize" class="mat-toolbar-row">
-    <mat-icon
-      class="mat-icon-logo"
-      aria-hidden="true"
-      [class.light]="(isDarkTheme | async)"
-      routerLink="/home"
-      routerLinkActive="active"
-    >
-      <h2>Khaled Elbahr</h2>
-    </mat-icon>
+    <h2 [class.light]="isDarkTheme | async">Khaled Elbahr</h2>
     <span class="example-spacer"></span>
     <button
       type="button"
       aria-label="theme toggle icon"
       mat-icon-button
-      [class.light]="(isDarkTheme | async)"
+      [class.light]="isDarkTheme | async"
       (click)="toggleDarkTheme()"
     >
       <mat-icon>emoji_objects</mat-icon>
@@ -24,7 +16,7 @@
       type="button"
       aria-label="Toggle sidenav"
       mat-icon-button
-      [class.light]="(isDarkTheme | async)"
+      [class.light]="isDarkTheme | async"
       (click)="toggleSideBar()"
       *ngIf="isHandset$ | async"
     >
